@@ -42,7 +42,7 @@ Or add to your MCP configuration (`~/.cursor/mcp.json`):
       "command": "uv",
       "args": [
         "--directory",
-        "~/Codes/mcp/apple_notes",
+        "/path/to/apple_notes",
         "run",
         "apple_notes.py"
       ]
@@ -66,5 +66,3 @@ Or add to your MCP configuration (`~/.cursor/mcp.json`):
 - The server uses AppleScript to interact with the Notes app
 - You may need to grant Terminal/iTerm/Cursor permission to control Notes in System Preferences > Security & Privacy > Accessibility
 - Account names are case-sensitive (e.g., "iCloud" vs "icloud")
-
-# apple-notes-mcp
