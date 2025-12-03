@@ -21,20 +21,21 @@ An MCP (Model Context Protocol) server for interacting with Apple Notes on macOS
 ## Installation
 
 ```bash
+git clone https://github.com/arslankhanali/apple-notes-mcp.git
 cd apple_notes
 uv venv
 source .venv/bin/activate
 uv add "mcp[cli]"
+
+# To run
+# uv run apple_notes.py
 ```
 
-## Usage
+## Usage with Cursor
+Add to your MCP configuration (`~/.cursor/mcp.json`):
 
-Run the server:
-```bash
-uv run apple_notes.py
-```
+> Change `/path/to/apple_notes` to where you cloned this repo
 
-Or add to your MCP configuration (`~/.cursor/mcp.json`):
 ```json
 {
   "mcpServers": {
