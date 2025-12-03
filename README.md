@@ -21,7 +21,7 @@ An MCP (Model Context Protocol) server for interacting with Apple Notes on macOS
 ## Notes
 
 - The server uses AppleScript to interact with the Notes app
-- You will need to grant Terminal/iTerm/Cursor permission to control Notes in System Preferences > Security & Privacy > Accessibility
+- You will need to grant Terminal/iTerm/Cursor *PERMISSION* to control Notes in System Preferences > Security & Privacy > Accessibility
 - Account names are case-sensitive (e.g., "iCloud" vs "icloud")
 
 
