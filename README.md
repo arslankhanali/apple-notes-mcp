@@ -18,11 +18,18 @@ An MCP (Model Context Protocol) server for interacting with Apple Notes on macOS
 - Python 3.10+
 - Notes app must be installed and accessible
 
+## Notes
+
+- The server uses AppleScript to interact with the Notes app
+- You will need to grant Terminal/iTerm/Cursor permission to control Notes in System Preferences > Security & Privacy > Accessibility
+- Account names are case-sensitive (e.g., "iCloud" vs "icloud")
+
+
 ## Installation
 
 ```bash
 git clone https://github.com/arslankhanali/apple-notes-mcp.git
-cd apple_notes
+cd apple-notes-mcp
 uv venv
 source .venv/bin/activate
 uv add "mcp[cli]"
@@ -34,7 +41,7 @@ uv add "mcp[cli]"
 ## Usage with Cursor
 Add to your MCP configuration (`~/.cursor/mcp.json`):
 
-> Change `/path/to/apple_notes` to where you cloned this repo
+> Change `/path/to/apple-notes-mcp` to where you cloned this repo
 
 ```json
 {
@@ -43,7 +50,7 @@ Add to your MCP configuration (`~/.cursor/mcp.json`):
       "command": "uv",
       "args": [
         "--directory",
-        "/path/to/apple_notes",
+        "/path/to/apple-notes-mcp",
         "run",
         "apple_notes.py"
       ]
@@ -62,8 +69,3 @@ Add to your MCP configuration (`~/.cursor/mcp.json`):
 - `delete_note` - Delete a note
 - `list_accounts` - List all available Notes accounts
 
-## Notes
-
-- The server uses AppleScript to interact with the Notes app
-- You may need to grant Terminal/iTerm/Cursor permission to control Notes in System Preferences > Security & Privacy > Accessibility
-- Account names are case-sensitive (e.g., "iCloud" vs "icloud")
